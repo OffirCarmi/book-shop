@@ -22,7 +22,7 @@ td {
 }
 
 .modal {
-    background-color: #111;
+    background-color: lightblue;
     padding: 10px;
     position: absolute;
     top: 0px;
@@ -38,13 +38,13 @@ td {
 }
 
 .modal h3 {
-    color: pink;
+    color: darkblue;
     text-decoration: overline;
     text-transform: capitalize;
 }
 
 .modal h4 span {
-    color: pink;
+    color: darkblue;
 }
 
 .modal img {

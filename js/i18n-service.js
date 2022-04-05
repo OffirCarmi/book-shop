@@ -1,55 +1,54 @@
 'use strict'
 
-var gCurrLang = 'en'
+var gCurrLang = 'en-US'
 
 const gTrans = {
     headline: {
-        en: 'My book store',
+        'en-US': 'My book store',
         he: 'חנות הספרים שלי',
     },
     id: {
-        en: 'ID',
+        'en-US': 'ID',
         he: 'קוד',
     },
     title: {
-        en: 'Title',
+        'en-US': 'Title',
         he: 'שם הספר',
     },
     price: {
-        en: 'Price',
+        'en-US': 'Price',
         he: 'מחיר',
     },
     actions: {
-        en: 'Actions',
+        'en-US': 'Actions',
         he: 'פעולות',
     },
-
     'desc-title': {
-        en: 'About the book',
+        'en-US': 'About the book',
         he: 'קצת על הספר',
     },
     read: {
-        en: 'Info',
+        'en-US': 'Info',
         he: 'מידע',
     },
     update: {
-        en: 'Update',
+        'en-US': 'Update',
         he: 'עדכן',
     },
     delete: {
-        en: 'Delete',
+        'en-US': 'Delete',
         he: 'מחק',
     },
     msg: {
-        en: '****',
+        'en-US': '****',
         he: '****',
     },
     'btn-add': {
-        en: 'Add new book',
+        'en-US': 'Add new book',
         he: 'הוספת ספר חדש',
     },
     close: {
-        en: 'Close',
+        'en-US': 'Close',
         he: 'סגור',
     },
 }
@@ -58,12 +57,20 @@ function setLang(lang) {
     gCurrLang = lang
 }
 
+function getCurrency(num) {
+    const opt = {
+        style:'currency',
+        currency: (gCurrLang === 'en-US')? 'USD' : 'ILS'
+    }
+    if (opt.currency === 'ILS') return new Intl.NumberFormat('he',opt).format(num)
+    else return new Intl.NumberFormat('en-US',opt).format(num)
+}
+
 function doTrans() {
     const els = document.querySelectorAll('[data-trans]')
     els.forEach(el => {
         const transKey = el.dataset.trans
         const txt = getTrans(transKey)
-        console.log(el.dataset)
 
         if (el.nodeName === 'INPUT') el.placeholder = txt
         else el.innerText = txt

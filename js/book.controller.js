@@ -5,8 +5,9 @@ function onInit() {
 }
 
 function onSetLang(lang) {
-    renderBooks()
     setLang(lang)
+    renderBooks()
+    
     // If lang is hebrew add RTL class to document.body
     if (lang === 'he') document.body.classList.add('rtl')
     else document.body.classList.remove('rtl')
@@ -22,7 +23,7 @@ function renderBooks() {
         strHTML += `<tr>
         <td class="rtl">${book.id}</td>
         <td class="rtl">${book.title}</td>
-        <td class="rtl">${book.price}</td>
+        <td class="rtl">${getCurrency(book.price)}</td>
         <td class="read rtl"> <button data-trans="read" onclick="onReadBook('${book.id}')"> Info </button> </td>
         <td class="update rtl"> <button data-trans="update" onclick="onUpdateBook('${book.id}')"> Update </button> </td>
         <td class="delete rtl"> <button data-trans="delete" onclick="onDeleteBook('${book.id}')"> Delete </button> </td>
