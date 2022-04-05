@@ -6,22 +6,34 @@ body.rtl .btn-delete {
     float: left;
 }
 
+.lang-select{
+    width: 7em;
+}
+
 td.rtl{
     text-align: left;
 }
 
 th {
+    padding: 0.5em;
+    text-align: center;
     font-size: 17px;
     text-transform: capitalize;
 }
 
 td {
+    padding: 0.25em;
     height: 2em;
     text-transform: capitalize;
 
 }
 
-.modal {
+td button {
+    width: 5em;
+    height: 2em;
+}
+
+/* .modal {
     background-color: lightblue;
     padding: 10px;
     position: absolute;
@@ -53,7 +65,7 @@ td {
 
 .modal>p {
     text-align: left;
-}
+} */
 
 
 .user-msg {
