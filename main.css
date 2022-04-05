@@ -1,3 +1,8 @@
+body {
+    background-color: rgb(240, 240, 240);
+
+}
+
 body.rtl {
     direction: rtl;
 }
@@ -6,11 +11,33 @@ body.rtl .btn-delete {
     float: left;
 }
 
-.lang-select{
-    width: 7em;
+header {
+    display: flex;
+    background-color: lightgray;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
 }
 
-td.rtl{
+.lang-select {
+    background-color: rgb(240, 240, 240);
+    width: 7em;
+    height: 3em;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+
+}
+
+.btn-outline-dark {
+    width: 10em;
+    margin: 1em 0 1.5em;
+}
+
+td.rtl {
     text-align: left;
 }
 
@@ -33,46 +60,12 @@ td button {
     height: 2em;
 }
 
-/* .modal {
-    background-color: lightblue;
-    padding: 10px;
-    position: absolute;
-    top: 0px;
-    left: 150%;
-    height: 80vh;
-    min-width: 300px;
-    text-align: center;
-}
-
-.modal.open {
-    left: 50%;
-    transition: left .5s;
-}
-
-.modal h3 {
-    color: darkblue;
-    text-decoration: overline;
-    text-transform: capitalize;
-}
-
-.modal h4 span {
-    color: darkblue;
-}
-
-.modal img {
-    max-height: 250px;
-}
-
-.modal>p {
-    text-align: left;
-} */
-
-
 .user-msg {
     position: fixed;
     bottom: -100px;
     right: 10px;
-    background-color: #111;
+    background-color: #ffc107;
+    border-radius: 4px;
     padding: 10px;
 }
 

@@ -1,5 +1,4 @@
 'use strict'
-
 var gCurrLang = 'en-US'
 
 const gTrans = {
@@ -55,6 +54,8 @@ const gTrans = {
 
 function setLang(lang) {
     gCurrLang = lang
+    saveToStorage('currLang', gCurrLang)
+
 }
 
 function getCurrency(num) {
@@ -89,4 +90,8 @@ function getTrans(transKey) {
     if (!translate) return key['en']
 
     return translate
+}
+
+function getCurrLang(){
+    return gCurrLang
 }

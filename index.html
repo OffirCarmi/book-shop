@@ -17,11 +17,12 @@
             <option value="en-US">English</option>
             <option value="he">עברית</option>
         </select>
-        <br>
-        <button class="btn btn-outline-dark" onclick="onAddBook()" data-trans="btn-add">Add new book</button>
     </header>
-    <table class="table table-sm books ">
-        <!-- <tr><th>id</th><th>title</th><th>price</th><th colspan="3">actions</th></tr>
+    <main>
+        <button class="btn btn-outline-dark" onclick="onAddBook()" data-trans="btn-add">Add new book</button>
+
+        <table class="table table-sm books ">
+            <!-- <tr><th>id</th><th>title</th><th>price</th><th colspan="3">actions</th></tr>
             <tr>
                 <td class="id">1</td>
                 <td class="title">vv is coming</td>
@@ -30,9 +31,10 @@
                 <td class="update"><button>update</button></td>
                 <td class="delete"><button>delete</button></td>
             </tr> -->
+        </table>
+    </main>
 
-    </table>
-
+    
     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
         aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -46,7 +48,7 @@
                     <h4>Price <span></span> </h4>
                     <img>
                     <h5 data-trans="desc-title">Description</h5>
-                    <p data-trans="desc-book"></p>
+                    <p></p>
                 </div>
             </div>
         </div>
