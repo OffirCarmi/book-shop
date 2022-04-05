@@ -1,3 +1,15 @@
+body.rtl {
+    direction: rtl;
+}
+
+body.rtl .btn-delete {
+    float: left;
+}
+
+td.rtl{
+    text-align: left;
+}
+
 th {
     font-size: 17px;
     text-transform: capitalize;
@@ -19,22 +31,27 @@ td {
     min-width: 300px;
     text-align: center;
 }
+
 .modal.open {
     left: 50%;
     transition: left .5s;
 }
-.modal h3{
-    color:pink;
+
+.modal h3 {
+    color: pink;
     text-decoration: overline;
     text-transform: capitalize;
 }
-.modal h4 span{
-    color:pink;
+
+.modal h4 span {
+    color: pink;
 }
+
 .modal img {
     max-height: 250px;
 }
-.modal > p {
+
+.modal>p {
     text-align: left;
 }
 
@@ -42,10 +59,11 @@ td {
 .user-msg {
     position: fixed;
     bottom: -100px;
-    right:10px;
+    right: 10px;
     background-color: #111;
     padding: 10px;
 }
+
 .user-msg.open {
     bottom: 10px;
     transition: bottom .5s;
